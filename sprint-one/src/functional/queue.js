@@ -9,7 +9,7 @@ var Queue = function() {
   // Implement the methods below
 
   someInstance.enqueue = function(value) {
-    storage[count] = value;
+    storage[firstElement + count] = value;
     count++;
     console.log(storage);
   };
@@ -19,10 +19,10 @@ var Queue = function() {
     delete storage[firstElement];
     console.log(storage);
 
+    firstElement++; 
     if (count > 0) {
       count--;
     } 
-    if(count>1){firstElement++; }
     console.log(firstElement);
     return result;  
 
@@ -36,3 +36,4 @@ var Queue = function() {
 
   return someInstance;
 };
+
