@@ -14,9 +14,9 @@ var Stack = function() {
   someInstance.pop = function() {
     //take the last value we pushed out of storage and return it
     //the last value is the one with the highest numerical key
-    var result = storage[size-1];
-    delete storage[size-1];
-    if(size>0){size--;}
+    var result = storage[size - 1 ];
+    delete storage[size - 1 ];
+    if (size > 0) { size--; }
     return result;
   };
 
