@@ -1,28 +1,102 @@
-var Stack = function() {
-  var someInstance = {};
+// var Stack = function() {
+//   var someInstance = {};
 
-  // Use an object with numeric keys to store values
+//   // Use an object with numeric keys to store values
+//   var storage = {};
+//   var key = 0;
+
+//   // Implement the methods below
+//   someInstance.push = function(value) {
+//     storage[key] = value;
+//     key ++;
+//   };
+
+//   someInstance.pop = function() {
+//     //take the last value we pushed out of storage and return it
+//     //the last value is the one with the highest numerical key
+//     var result = storage[key - 1 ];
+//     delete storage[key - 1 ];
+//     if (key > 0) { key--; }
+//     return result;
+//   };
+
+//   someInstance.size = function() {
+//     return key;
+//   };
+
+//   return someInstance;
+// };
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+var Stack = function () {
+  var instance = {};
   var storage = {};
-  var size = 0;
+  var key = 0;
 
-  // Implement the methods below
-  someInstance.push = function(value) {
-    storage[size] = value;
-    size ++;
+  instance.push = function(value) {
+    instance[key] = value;
+    key++;
   };
 
-  someInstance.pop = function() {
-    //take the last value we pushed out of storage and return it
-    //the last value is the one with the highest numerical key
-    var result = storage[size - 1 ];
-    delete storage[size - 1 ];
-    if (size > 0) { size--; }
+  instance.pop = function() {
+    var result = instance[key - 1];
+    delete instance[key - 1];
+    if (key > 0) {
+      key--;
+    }
     return result;
   };
 
-  someInstance.size = function() {
-    return size;
+  instance.size = function(value) {
+    return key;
   };
-
-  return someInstance;
+  return instance;
 };
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

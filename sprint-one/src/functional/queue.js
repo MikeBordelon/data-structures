@@ -11,19 +11,16 @@ var Queue = function() {
   someInstance.enqueue = function(value) {
     storage[firstElement + count] = value;
     count++;
-    console.log(storage);
   };
 
   someInstance.dequeue = function() {
     var result = storage[firstElement];
     delete storage[firstElement];
-    console.log(storage);
 
     firstElement++; 
     if (count > 0) {
       count--;
     } 
-    console.log(firstElement);
     return result;  
 
 
@@ -35,5 +32,11 @@ var Queue = function() {
   };
 
   return someInstance;
+};
+
+var instance = {
+  0: 'test',
+  1: 'test2',
+  2: 'test3'
 };
 
