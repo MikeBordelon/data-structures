@@ -31,7 +31,26 @@ var BSTMethods = {
     }
 
   },
-  contains: function() {
+  contains: function(target) {
+    var currentNode = this;
+    var result = false;
+
+    if (currentNode.value === target) {
+      return true;
+    }
+    // check entire right side
+    if (currentNode.right !== undefined) {
+      result = currentNode.right.contains(target);
+    }
+
+    //  if that resurns a false check left side
+    if (result === false) {
+      if (currentNode.left !== undefined) {
+        result = currentNode.left.contains(target);
+      }
+    }
+
+    return result;
 
   },
   depthFirstLog: function(cb) {
