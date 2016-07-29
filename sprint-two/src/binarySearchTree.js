@@ -22,9 +22,12 @@ var BSTMethods = {
     }
 
     if (!found) {
-      currentnode.left.insert(value);
-
-      currentnode.right.insert(value);
+      if (currentnode.left !== undefined) {
+        currentnode.left.insert(value);
+      }
+      if (currentnode.right !== undefined) {
+        currentnode.right.insert(value);
+      }
     }
 
   },
