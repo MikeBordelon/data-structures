@@ -34,10 +34,18 @@ var BSTMethods = {
   contains: function() {
 
   },
-  depthFirstLog: function() {
+  depthFirstLog: function(cb) {
+    var currentnode = this;
+    cb(currentnode.value);
+    if (currentnode.left !== undefined) {
+      currentnode.left.depthFirstLog(cb);
+    }
+    if (currentnode.right !== undefined) {
+      currentnode.right.depthFirstLog(cb);
+    }
+    
 
-  }
-
+  } 
 };
 
 
