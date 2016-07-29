@@ -16,7 +16,7 @@ setPrototype.contains = function(item) {
   if (this._storage[item] === item) {
     return true;
   } else {
-   return   false;
+    return false;
   }
 };
 
